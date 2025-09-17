@@ -173,7 +173,7 @@ function createBSAHandler(fileName: string,
   return PromiseBB.resolve((async () => (options.create)
     ? util.toPromise(cb => createBSA(fileName, cb))
     : util.toPromise(cb => loadBSA(fileName, options.verify === true, cb)))
-    ())
+  ())
     .then((arc: BSArchive) => Promise.resolve(new BSAHandler(arc)));
 }
 
